@@ -12,7 +12,7 @@ export default function BookingSchedule() {
 
     async function BookTimeslot() {
         
-    const restaurantId = 1; // Update this based on your logic
+    const restaurantId = 1; // Update this based on your choise
     const userId = 6; // Update this based on your logic
     const nrOfPeople = selectedNrOfPeople; // Number of people from state
     const requests = ''; // Any special requests you might want to add
@@ -129,12 +129,11 @@ export default function BookingSchedule() {
 
 
 
-
-
     
     //Rendering amount of people
     const maxPeople = 8;
     const possibleNrOfPeople = [];
+    
     for (let i = 1; i <= maxPeople; i++) {
         possibleNrOfPeople.push(
             <button key={`guest-${i}`} style={{ width: '15%', height: '15%', margin: '1px', display: 'inline', justifyContent: 'end' }} onClick={() => handleNrOfPeopleClick(i)}>
@@ -142,7 +141,7 @@ export default function BookingSchedule() {
             </button>
         )
     }
-
+    
 
     // Rendering month and date buttons
     let lastMonth = ""; 
@@ -236,7 +235,6 @@ export default function BookingSchedule() {
                     </button>
                 </div>
             )}
-
 
             {/* save index from possible timeslot and send a post to create booking  */}
             
